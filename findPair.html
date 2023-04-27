@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    /* To find a first pair from a number array whose sum is zero
+Vidhya Skill School9:18 PM
+To find a first pair from a number array whose sum is X
+X = 5
+arr = [1,2,3,4,5,6]
+
+To find a first three elements from a number array whose sum is X
+6
+Vidhya Skill School9:26 PM
+[3,0,1,1,9,7]
+[1,1,2,2,3] */
+
+    // (function firstPair(userInput,a, b) {
+    //
+    // });
+
+    const findTheFirstPair = (userInput) => {
+      const arr = [1, 2, 3, 4, 5, 6];
+      let res = true;
+      //   Index: 0,1,2,3,4,5
+
+      for (let i = 0; i <= arr.length; i++) {
+        const a = arr[i];
+        // first loop i will hold the value of first Index in variable "a"
+        // In second loop i will add a value with every number in the loop
+        for (let j = i + 1; j <= arr.length; j++) {
+          const b = arr[j];
+          const c = a + b;
+          // if the userInput match the if condition will triggered we get the first 2 pair
+          if (c === userInput) {
+            // firstPair(userInput, a, b);
+            console.log(`The First Pair of ${userInput} is ${a} and ${b}`);
+            res = false;
+            break;
+          }
+        }
+        if (res === false) {
+          break;
+        }
+      }
+    };
+    findTheFirstPair(5);
+  </script>
+</html>
