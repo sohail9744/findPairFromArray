@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Union value</title>
+  </head>
+  <body></body>
+  <script>
+ const input1 = [1, 2, 3, 4, 5, 1];
+const input2 = [1, 2, 3, 4, 5, 1, 7, 6, 4, 3, 8];
+const unionValue = [];
+
+/* let finalLength = input1;
+
+if (input1.length < input2.length) {
+  finalLength = input2;
+}
+
+for (let i = 0; i < finalLength.length; i++) {
+  if (input1[i] === input2[i]) {
+    unionValue.push(finalLength[i]);
+  }
+}
+
+console.log(unionValue); */
+
+// -------------------------------------------------------------------- seocnd approach
+
+for (let k = 0; k < input1.length; k++) {
+  for (let m = 0; m < input2.length; m++) {
+    if (input1[k] === input2[m]) {
+      unionValue.push(input1[k]);
+    }
+  }
+}
+
+console.log(unionValue);
+
+  </script>
+</html>
